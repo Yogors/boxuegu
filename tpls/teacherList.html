@@ -1,0 +1,53 @@
+<div id="teacherList-container">
+    <ol class="breadcrumb">
+        <li><a href="# ">讲师管理</a></li>
+        <li class="active ">讲师管理列表</li>
+    </ol>
+
+    <div class="row">
+        <button class="btn btn-success col-md-1 pull-left" id="addTeacherBtn">添加讲师</button>
+    </div>
+
+    <table class="table table-bordered text-center">
+        <thead>
+            <th>讲师</th>
+            <th>代号</th>
+            <th>性别</th>
+            <th>手机号</th>
+            <th>邮箱</th>
+            <th>status</th>
+            <th>出生日期</th>
+            <th>入职日期</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+            {{each result}}
+            <tr>
+                <td>{{$value.tc_name}}</td>
+                <td>{{$value.tc_roster}}</td>
+                {{if $value.tc_gender==0}}
+                <td>男</td>
+                {{else}}
+                <td>女</td>
+                {{/if}}
+                <td>{{$value.tc_cellphone}}</td>
+                <td>{{$value.tc_email}}</td>
+
+                {{if $value.tc_status==1}}
+                <td class="status-td">启用</td>
+                {{else}}
+                <td class="status-td">注销</td>
+                {{/if}}
+                <td>{{$value.tc_birthday}}</td>
+                <td>{{$value.tc_join_date}}</td>
+                <td tc_id={{$value.tc_id}} tc_status="{{$value.tc_status}}">
+                    <button class="btn btn-success showBtn">查看</button>
+                    <button class="btn btn-primary editBtn">编辑</button> {{if $value.tc_status==1}}
+                    <button class="btn btn-info statusBtn">注销</button> {{else}}
+                    <button class="btn btn-info statusBtn">启用</button> {{/if}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

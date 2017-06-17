@@ -1,0 +1,28 @@
+<div id="courseList-container">
+    <ol class="breadcrumb">
+        <li><a href="# ">课程管理列表</a></li>
+        <li class="active ">课程列表</li>
+    </ol>
+    <ul class="list-group">
+        {{each result}}
+        <li class="list-group-item">
+            <div class="media">
+                <div class="media-left">
+                    <a href="javascript:void(0)" cs_id="{{$value.cs_id}}" class="picEditBtn"> 
+                         <img class="media-object" src="{{$value.cs_cover}}" alt="..." width="120" height="120">
+                     </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{$value.cs_name}}</h4>
+                    <div>
+                        <button class="btn btn-success courseTimeEdit" cs_id="{{$value.cs_id}}">编辑课时</button>
+                        <button class="btn btn-primary courseBaseInfoBtn" cs_id='{{$value.cs_id}}'>编辑基本信息</button>
+                    </div>
+                    <div>———讲师:{{$value.tc_name}}</div>
+                    <div>———分类:{{$value.cg_name}}</div>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>

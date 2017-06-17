@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" type="text/css" href="assets/bootstrap-datetimepicker/build/build_standalone.less" />-->
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/uploadify/uploadify.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+    <div class="left">
+        <div class="profile-container">
+            <div class="userIcon">
+                <img src="images/userIcon.jpg" class="img-circle img-responsive">
+            </div>
+            <div class="userName"></div>
+        </div>
+        <div class="section-container">
+            <div class="list-group">
+                <button type="button" class="list-group-item glyphicon glyphicon-folder-close " id="teacherManager">&nbsp 讲师管理</button>
+                <button type="button" class="list-group-item glyphicon glyphicon-th-list" id="courseListManager">&nbsp 课程列表</button>
+
+                <button type="button" class="list-group-item glyphicon glyphicon-pencil" id="courseCreat" style="padding-left:50px">&nbsp 创建课程</button>
+                <button type="button" class="list-group-item glyphicon glyphicon-plus-sign" id="courseInfoAdd" style="padding-left:50px">&nbsp 基本信息编辑</button>
+                <button type="button" class="list-group-item glyphicon glyphicon-picture" id="courseListImgs" style="padding-left:50px">&nbsp 课程图片</button>
+                <button type="button" class="list-group-item glyphicon glyphicon-dashboard" id="courseTimeManager" style="padding-left:50px">&nbsp 课时管理</button>
+
+                <button type="button" class="list-group-item glyphicon glyphicon-folder-close active" id="courseCategoryManager">&nbsp 课程分类</button>
+                <button type="button" class="list-group-item glyphicon glyphicon-stats" id="chartsManager">&nbsp 图表统计</button>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="panel panel-default header-container">
+            <div class="panel-body">
+                <button type="button" style="font-size:16px" class="pull-left btn btn-success glyphicon glyphicon-list"></button>
+                <div class="pull-right">
+                    <a href="javascript:;" class="glyphicon glyphicon-user" id="personalCenter"> 个人中心</a>
+                    <a href="javascript:;" class="glyphicon glyphicon-paste" id="quitBtn"> 退出</a>
+                </div>
+            </div>
+        </div>
+        <div class="module-container">
+
+        </div>
+    </div>
+    <script type="text/javascript" src="js/lib/require.js" data-main="main"></script>
+</body>
+
+</html>

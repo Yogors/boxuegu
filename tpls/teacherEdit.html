@@ -1,0 +1,75 @@
+<div id="teacherList-container">
+    <ol class="breadcrumb">
+        <li><a href="# ">讲师管理</a></li>
+        <li class="active ">讲师编辑</li>
+    </ol>
+
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body" style="width:50%;margin:0 auto;">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">姓名</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="tc_name" value="{{result.tc_name}}">
+                        </div>
+                    </div>
+
+                    <div class="form-group hidden">
+                        <label class="col-sm-2 control-label">tc_id</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" name="tc_id" value="{{result.tc_id}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">入职时间</label>
+                        <div class="input-append date col-sm-10" id="datetimepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                            <input class="span2 form-control" size="16" type="text" readonly name="tc_join_date" value="{{result.tc_join_date}}">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">类型</label>
+                        <div class="col-sm-10">
+
+                            {{if(result.tc_type==0)}}
+                            <select class="form-control pull-left" name="tc_type">
+                                    <option value="0" selected="selected">管理员</option>
+                                    <option value="1">讲师</option>       
+                            </select> {{else}}
+                            <select class="form-control pull-left" name="tc_type">
+                                    <option value="0">管理员</option>
+                                    <option value="1" selected="selected">讲师</option>       
+                            </select> {{/if}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">性别</label>
+                        <div class="col-sm-10">
+                            {{if(result.tc_gender==0)}}
+                            <label class="radio-inline">
+                                    <input type="radio" name="tc_gender" value="0" checked="checked"> 男
+                            </label>
+                            <label class="radio-inline">
+                                      <input type="radio" name="tc_gender" value="1"> 女
+                            </label> {{else}}
+                            <label class="radio-inline">
+                                    <input type="radio" name="tc_gender" value="0"> 男
+                            </label>
+                            <label class="radio-inline">
+                                      <input type="radio" name="tc_gender" value="1" checked="checked"> 女
+                            </label> {{/if}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary col-sm-12">添加</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

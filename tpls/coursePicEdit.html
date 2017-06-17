@@ -1,0 +1,32 @@
+<div id="courseList-container">
+    <ol class="breadcrumb">
+        <li><a href="# ">课程管理列表</a></li>
+        <li class="active ">课程图片编辑</li>
+    </ol>
+    <form class="form-horizontal">
+        <div class="panel panel-default" id="editBaseInfo">
+            <div class="panel-heading">上传课程图片</div>
+            <div class="panel-body" style="width:60%">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">课程名称</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="cs_name" value="{{result.cs_name}}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">讲师</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" value="{{result.tc_name}}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">课程图片</label>
+                    <div class="col-sm-10">
+                        <img src="{{result.cs_cover_original}}" alt="" cs_id="{{result.cs_id}}">
+                        <button type="file" id="coursePicCheck">选择图片</button>
+                    </div>
+                </div>
+    </form>
+    </div>
+    </div>
+</div>

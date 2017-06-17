@@ -1,0 +1,31 @@
+<div id="courseList-container">
+    <ol class="breadcrumb">
+        <li><a href="# ">课程管理列表</a></li>
+        <li class="active ">课时管理</li>
+    </ol>
+
+    <div class="row">
+        <button class="btn btn-success col-md-1 pull-right" id="addCourseTimeBtn">添加课时</button>
+    </div>
+
+    <table class="table table-bordered text-center">
+        <thead>
+            <th>编号</th>
+            <th>名称</th>
+            <th>时长</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+            {{each lesson}}
+            <tr>
+                <td>{{$value.ct_id}}</td>
+                <td>{{$value.ct_name}}</td>
+                <td>{{$value.ct_video_duration}}</td>
+                <td>
+                    <button class="btn btn-primary courseTimeEditBtn" ct_id='{{$value.ct_id}}'>编辑</button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
